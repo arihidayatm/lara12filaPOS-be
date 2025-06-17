@@ -11,7 +11,7 @@ class CreateCategory extends CreateRecord
 {
     protected static string $resource = CategoryResource::class;
 
-    //get direct url to the page
+    //Get the redirect URL after creating a category
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

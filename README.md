@@ -1,4 +1,18 @@
-# POS Backend
+# POS (Point of Sales) Backend
+POS (Point of Sales) adalah sebuah sistem yang digunakan untuk mengatur dan mengelola transaksi penjualan di suatu toko atau restoran. Sistem ini memungkinkan Anda untuk mengelola produk, mengatur harga, mengelola stok, dan mengelola transaksi penjualan.
+
+Dengan menggunakan sistem ini, Anda dapat meningkatkan efisiensi dan akurasi dalam mengelola transaksi penjualan. Sistem ini juga dapat membantu Anda untuk memantau performa toko atau restoran Anda dan membuat keputusan yang lebih baik berdasarkan data yang akurat.
+
+Sistem POS ini juga dilengkapi dengan fitur-fitur seperti:
+
+- Manajemen produk
+- Manajemen harga
+- Manajemen stok
+- Manajemen transaksi penjualan
+- Laporan penjualan
+- Laporan stok
+- Laporan keuangan
+
 ## Langkah-langkah Instalasi
 
 1. **Extract File Zip**
@@ -27,6 +41,18 @@
 
 8. **Jalankan `php artisan make:filament-user`, lalu Masukkan Informasi User**
     - Jalankan perintah `php artisan make:filament-user` dan masukkan informasi pengguna yang diminta.
+    ```
+        Name:
+        ❯ Super Admin
+
+        Email address:
+        ❯ admin@mahdev.com
+
+        Password:
+        ❯password
+    ```
+    -`INFO`
+    - Success! admin@mahdev.com may now log in at http://localhost/admin/login.
 
 9. **Jalankan `php artisan serve`, Buka Web di URL `/admin`**
     - Jalankan perintah `php artisan serve`.
@@ -36,29 +62,3 @@
     - Proyek Laravel Anda sekarang siap digunakan.
 
 Project siap digunakan
-
-
--`php artisan shield:setup`
--`php artisan shield:install`
-
-What is the panel?
--```❯ admin```
-
--`php artisan shield:generate --all`
-Which panel do you want to generate permissions/policies for?
--```admin .............................................................................................................0```
-```❯ 0```
-
--`php artisan shield:super-admin`
-```
-+----+-------------+-----------------------+-------+
-| ID | Name        | Email                 | Roles |
-+----+-------------+-----------------------+-------+
-| 1  | Admin       | admin@mahdev.com      |       |
-+----+-------------+-----------------------+-------+
-```
--Please provide the `UserID` to be set as `super_admin`:
--```❯ 1```
-
--`INFO`
--Success! admin@mahdev.com may now log in at http://localhost/admin/login.

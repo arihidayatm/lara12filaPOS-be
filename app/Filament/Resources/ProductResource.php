@@ -17,7 +17,7 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
 
     public static function form(Form $form): Form
     {
@@ -31,7 +31,7 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()
-                    ->prefix('$'),
+                    ->prefix('Rp.'),
                 Forms\Components\Select::make('category_id')
                     ->label('Category')
                     ->options(
@@ -54,10 +54,15 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->money()
+                    ->numeric()
+                    ->prefix('Rp. ')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('category_id')
-                    ->numeric()
+                    ->label('Category')
+                    ->getStateUsing(function (Product $record) {
+                        return $record->category ? $record->category->name : 'N/A';
+                    })
+                    ->searchable()
                     ->sortable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('stock')
