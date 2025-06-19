@@ -62,3 +62,6 @@ Sistem POS ini juga dilengkapi dengan fitur-fitur seperti:
     - Proyek Laravel Anda sekarang siap digunakan.
 
 Project siap digunakan
+
+## plugin
+- Advanced Widgets [https://github.com/eighty9nine/filament-advanced-widgets]

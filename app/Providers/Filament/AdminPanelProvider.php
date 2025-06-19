@@ -8,8 +8,8 @@ use Filament\Widgets;
 use App\Models\Product;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-use App\Filament\Widgets\ProductsWidget;
-use App\Filament\Widgets\CategoriesWidget;
+// use App\Filament\Widgets\ProductsWidget;
+// use App\Filament\Widgets\CategoriesWidget;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -20,6 +20,8 @@ use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use EightyNine\FilamentAdvancedWidget\AdvancedStatsOverviewWidget;
+use EightyNine\FilamentAdvancedWidget\AdvancedChartWidget;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -45,8 +47,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                CategoriesWidget::class,
-                ProductsWidget::class,
+                AdvancedStatsOverviewWidget::class,
+                // AdvancedChartWidget::class,
+                // CategoriesWidget::class,
+                // ProductsWidget::class,
                 // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class,
             ])
